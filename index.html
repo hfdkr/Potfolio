@@ -36,7 +36,6 @@
             --font-urbanist: "Urbanist", sans-serif;
         }
         /* Encoche transparente autour du bouton (bouton w-20 = 80px) */
-        /* Image découpée en cercle autour du bouton (bouton w-20 = 80px, jeu de 12px) */
         .notch {
             clip-path: shape(
              from 0 32px,
@@ -90,499 +89,544 @@
 
         </nav>
     </header>
+    <main>
+        <!--  HERO  -->
+        <section id="home" class="max-w-6xl mx-auto px-5 pt-14 text-center space-y-[10px]">
 
-
-    <!--  HERO  -->
-    <section id="home" class="max-w-6xl mx-auto px-5 pt-14 text-center space-y-[10px]">
-
-        <!-- Badge Hello + vecteur en haut à droite -->
-        <div class="relative inline-block">
-            <span
-                class="inline-block font-lufga font-medium text-[20px] leading-[100%] tracking-[-1.5%] text-neutral-900 border-[1.27px] border-neutral-900 rounded-[38.24px] bg-white/10 py-[9.5px] px-[25.49px] cursor-pointer hover:text-orange">Hello!</span>
-            <img src="./assets/Vector 1.png" alt="" class="absolute -top-5 -right-7 w-6">
-        </div>
-
-        <h1 class="font-urbanist font-semibold text-[95.57px] leading-[100%] tracking-[-1.5%]">
-            I'm <span class="text-orange">Jenny</span>,<br>
-            <!-- Vecteur en bas à gauche de "Product Designer" -->
-            <span class="relative inline-block">
-                Product Designer
-                <img src="./assets/Mask group.png" alt="" class="absolute -bottom-10 -left-14 w-12 rotate-180">
-            </span>
-        </h1>
-        <div class="grid lg:grid-cols-4 items-center gap-8">
-
-
-            <!-- Citation -->
-            <div class="relative z-20 text-left">
-                <p class="font-lufga text-5xl text-heading">“</p>
-
-                <p
-                    class="font-medium font-lufga text-[16px] lg:text-[20px] leading-[100%] tracking-[-1.5%] text-heading whitespace-nowrap">
-                    Jenny’s Exceptional product design<br>
-                    ensure our website’s success.<br>
-                    Highly Recommended
-                </p>
+            <!-- Badge Hello + vecteur en haut à droite -->
+            <div class="relative inline-block">
+                <span
+                    class="inline-block font-lufga font-medium text-[20px] leading-[100%] tracking-[-1.5%] text-neutral-900 border-[1.27px] border-neutral-900 rounded-[38.24px] bg-white/10 py-[9.5px] px-[25.49px] cursor-pointer hover:text-orange">Hello!</span>
+                <img src="./assets/Vector 1.png" alt="" class="absolute -top-5 -right-7 w-6">
             </div>
 
+            <h1 class="font-urbanist font-semibold text-[95.57px] leading-[100%] tracking-[-1.5%]">
+                I'm <span class="text-orange">Jenny</span>,<br>
+                <!-- Vecteur en bas à gauche de "Product Designer" -->
+                <span class="relative inline-block">
+                    Product Designer
+                    <img src="./assets/Vector 1.png" alt="Vector" class="absolute -bottom-10 -left-14 w-12 rotate-180">
+                </span>
+            </h1>
+            <div class="grid lg:grid-cols-4 items-center gap-8">
 
 
-            <!-- Photo -->
-            <div class="relative lg:col-span-2 lg:-mt-20 flex justify-center items-end">
+                <!-- Citation -->
+                <div class="relative z-20 text-left">
+                    <p class="font-lufga text-5xl text-heading">“</p>
 
-                <!--  Demi-cercle orange d rrière -->
-                <div
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-90 h-50 lg:w-[540px] lg:h-[270px] bg-orange-light rounded-t-full">
+                    <p
+                        class="font-medium font-lufga text-[16px] lg:text-[20px] leading-[100%] tracking-[-1.5%] text-heading whitespace-nowrap">
+                        Jenny’s Exceptional product design<br>
+                        ensure our website’s success.<br>
+                        Highly Recommended
+                    </p>
                 </div>
 
-                <!--  Photo au milieu -->
-                <img src="/assets/section1-image.png" alt="Jenny" class="relative z-10 object-contain">
 
-                <!-- Boutons  devant -->
-                <div
-                    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 p-2 rounded-full border border-white/50 bg-white/10 backdrop-blur-md">
-                    <a href="#portfolio" class="bg-orange text-white rounded-full px-6 py-3 whitespace-nowrap">Portfolio
-                        ↗</a>
-                    <a href="#contact" class="text-white rounded-full px-6 py-3 whitespace-nowrap">Hire me</a>
-                </div>
 
-            </div>
+                <!-- Photo -->
+                <div class="relative lg:col-span-2 lg:-mt-20 flex justify-center items-end">
 
-            <!-- Expérience -->
-            <div class="text-left lg:text-right">
-                <div class="flex justify-start lg:justify-end">
-                    <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
-                    <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
-                    <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
-                    <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
-                    <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
-                </div>
-
-                <p
-                    class="font-urbanist font-bold text-[47px] leading-[100%] tracking-[-1.5%] font-bold text-neutral-900">
-                    10 Years</p>
-                <p class="font-lufga text-[20px] leading-[100%] trackig-[-1.5%] text-neutral-900">Experience</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!--  SERVICES  -->
-    <section id="services"
-        class="relative overflow-hidden bg-neutral-900 bg-[url(./assets/services-bg.png)] bg-cover bg-center rounded-[40px] px-6 py-14 sm:px-10 lg:px-14 lg:py-16">
-
-        <!-- ===== Formes jaunes (décoration, derrière les cartes) ===== -->
-        <img src="./assets/light-yellow-abstract-background.png" alt=""
-            class="absolute top-[15%] -left-[4%] w-[20%] z-0 pointer-events-none">
-        <img src="./assets/light-yellow-abstract-background.png" alt=""
-            class="absolute top-[10%] left-[39%] w-[12%] z-0 pointer-events-none">
-        <img src="./assets/light-yellow-abstract-background.png" alt=""
-            class="absolute top-[45%] -right-[4%] w-[30%] z-0 pointer-events-none">
-
-        <!-- ===== Contenu (devant) ===== -->
-        <div class="relative z-10 max-w-6xl mx-auto">
-
-            <!-- En-tête -->
-            <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-                <h2 class="font-lufga text-4xl lg:text-5xl font-medium text-white">
-                    My <span class="text-orange">Services</span>
-                </h2>
-                <p class="max-w-md text-sm lg:text-base leading-relaxed text-white/90">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
-                    posuere in justo vulputate, bibendum sodales
-                </p>
-            </div>
-
-            <!-- Cartes -->
-            <div class="grid md:grid-cols-3 gap-6">
-
-                <!-- Carte 1 -->
-                <div class="group relative">
-                    <!-- Verre flouté (s'arrête avant le bas de l'image) -->
+                    <!--  Demi-cercle orange d rrière -->
                     <div
-                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                        class="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-90 h-50 lg:w-[540px] lg:h-[270px] bg-orange-light rounded-t-full">
                     </div>
 
-                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">UI/ UX
-                        Design</h3>
-                    <div class="relative h-px w-full bg-white/30"></div>
+                    <!--  Photo au milieu -->
+                    <img src="/assets/section1-image.png" alt="Jenny" class="relative z-10 object-contain">
 
-                    <div class="relative mt-12">
-                        <!-- Calques empilés derrière l'image -->
-                        <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                        <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+                    <!-- Boutons  devant -->
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 p-2 rounded-full border border-white/50 bg-white/10 backdrop-blur-md">
+                        <a href="#portfolio"
+                            class="bg-orange text-white rounded-full px-6 py-3 whitespace-nowrap">Portfolio
+                            ↗</a>
+                        <a href="#contact" class="text-white rounded-full px-6 py-3 whitespace-nowrap">Hire me</a>
+                    </div>
 
-                        <!-- Image découpée (clip-path) -->
-                        <div class="notch relative h-64 overflow-hidden bg-grey-100">
-                            <img src="./assets/image-card1.png" alt="UI/UX Design"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+
+                <!-- Expérience -->
+                <div class="text-left lg:text-right">
+                    <div class="flex justify-start lg:justify-end">
+                        <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
+                        <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
+                        <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
+                        <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
+                        <span><img class="py-[3.33px] px-[2.67px]" src="./assets/Star.png" alt="star"></span>
+                    </div>
+
+                    <p
+                        class="font-urbanist font-bold text-[47px] leading-[100%] tracking-[-1.5%] font-bold text-neutral-900">
+                        10 Years</p>
+                    <p class="font-lufga text-[20px] leading-[100%] trackig-[-1.5%] text-neutral-900">Experience</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!--  SERVICES  -->
+        <section id="services"
+            class="relative overflow-hidden  bg-[url(./assets/backgroung.jpg)] bg-cover bg-center rounded-[40px] px-6 py-14 sm:px-10 lg:px-14 lg:py-16">
+
+            <!-- ===== Formes jaunes (décoration, derrière les cartes) ===== -->
+            <img src="./assets/yellow-abstract.svg" alt=""
+                class="absolute top-[5%] -left-[0%] w-[20%] z-0 pointer-events-none">
+            <img src="./assets/light-yellow-abstract.png" alt=""
+                class="absolute top-[4%] left-[39%] w-[180px] z-0 pointer-events-none">
+            <img src="./assets/abstract-background.svg" alt="backdrop-abstract"
+                class="absolute top-[5%] -right-[0%] w-[473px] z-0 pointer-events-none">
+            <!-- ===== Contenu (devant) ===== -->
+            <div class="relative z-10 max-w-6xl mx-auto">
+
+                <!-- En-tête -->
+                <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                    <h2 class="font-lufga text-4xl lg:text-5xl font-medium text-white">
+                        My <span class="text-orange">Services</span>
+                    </h2>
+                    <p class="max-w-md text-sm lg:text-base leading-relaxed text-white/90">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
+                        posuere in justo vulputate, bibendum sodales
+                    </p>
+                </div>
+
+                <!-- Cartes -->
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <!-- Carte 1 -->
+                    <div class="group relative">
+                        <!-- Verre flouté (s'arrête avant le bas de l'image) -->
+                        <div
+                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <!-- Bouton flèche -->
-                        <a href="#"
-                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
-                        </a>
+                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                            UI/ UX
+                            Design</h3>
+                        <div class="relative h-px w-full bg-white/30"></div>
+
+                        <div class="relative mt-12">
+                            <!-- Calques empilés derrière l'image -->
+                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
+                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+
+                            <!-- Image découpée (clip-path) -->
+                            <div class="notch relative h-64 overflow-hidden bg-grey-100">
+                                <img src="./assets/image-card1.png" alt="UI/UX Design"
+                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            </div>
+
+                            <!-- Bouton flèche -->
+                            <a href="#"
+                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Carte 2 -->
-                <div class="group relative">
-                    <div
-                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
-                    </div>
-
-                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">Web
-                        Design</h3>
-                    <div class="relative h-px w-full bg-white/30"></div>
-
-                    <div class="relative mt-12">
-                        <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                        <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
-
-                        <div class="notch relative h-64 overflow-hidden bg-white">
-                            <img src="./assets/image-card2.png" alt="Web Design"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                    <!-- Carte 2 -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <a href="#"
-                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
-                        </a>
+                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                            Web
+                            Design</h3>
+                        <div class="relative h-px w-full bg-white/30"></div>
+
+                        <div class="relative mt-12">
+                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
+                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+
+                            <div class="notch relative h-64 overflow-hidden bg-white">
+                                <img src="./assets/image-card2.png" alt="Web Design"
+                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            </div>
+
+                            <a href="#"
+                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Carte 3 -->
-                <div class="group relative">
-                    <div
-                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
-                    </div>
-
-                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
-                        Landing Page</h3>
-                    <div class="relative h-px w-full bg-white/30"></div>
-
-                    <div class="relative mt-12">
-                        <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                        <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
-
-                        <div class="notch relative h-64 overflow-hidden bg-grey-100">
-                            <img src="./assets/image-card3.png" alt="Landing Page"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                    <!-- Carte 3 -->
+                    <div class="group relative">
+                        <div
+                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <a href="#"
-                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
-                        </a>
+                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                            Landing Page</h3>
+                        <div class="relative h-px w-full bg-white/30"></div>
+
+                        <div class="relative mt-12">
+                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
+                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+
+                            <div class="notch relative h-64 overflow-hidden bg-grey-100">
+                                <img src="./assets/image-card3.png" alt="Landing Page"
+                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            </div>
+
+                            <a href="#"
+                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Points (décoration) -->
+                <div class="mt-10 flex items-center justify-center gap-2">
+                    <span class="w-12 h-3 rounded-full bg-orange"></span>
+                    <span class="w-3 h-3 rounded-full bg-white"></span>
+                    <span class="w-3 h-3 rounded-full bg-white"></span>
+                    <span class="w-3 h-3 rounded-full bg-white"></span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--  WORK EXPERIENCE  -->
+        <section id="resume" class="max-w-6xl mx-auto px-5 py-20">
+
+            <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-center">My <span class="text-orange">Work
+                    Experience</span></h2>
+
+            <div class="mt-16 space-y-12">
+
+                <!-- Expérience 1 -->
+                <div class="relative grid md:grid-cols-2 gap-4 md:gap-0">
+
+                    <!-- Rond orange (centre) -->
+                    <div
+                        class="hidden md:flex absolute top-1 left-1/2 -translate-x-1/2 z-10 w-9 h-9 items-center justify-center rounded-full border border-dashed border-neutral-900 bg-white">
+                        <span class="w-5 h-5 rounded-full bg-orange"></span>
+                    </div>
+                    <!-- Trait en pointillés vers le rond suivant -->
+                    <div
+                        class="hidden md:block absolute left-1/2 top-[22px] h-[calc(100%+3rem)] border-l-2 border-dashed border-neutral-900">
+                    </div>
+
+                    <div class="md:pr-16">
+                        <h3 class="font-lufga text-2xl font-semibold">Cognizant, Mumbai</h3>
+                        <p class="font-inter text-grey-400 mt-2">Sep 2016 - July 2020</p>
+                    </div>
+                    <div class="md:pl-16">
+                        <h3 class="font-lufga text-2xl font-semibold">Experience Designer</h3>
+                        <p class="text-grey-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Duis
+                            lacus nunc, posuere in justo vulputate, bibendum sodales</p>
+                    </div>
+                </div>
+
+                <!-- Expérience 2 -->
+                <div class="relative grid md:grid-cols-2 gap-4 md:gap-0">
+
+                    <!-- Rond noir (centre) -->
+                    <div
+                        class="hidden md:flex absolute top-1 left-1/2 -translate-x-1/2 z-10 w-9 h-9 items-center justify-center rounded-full border border-dashed border-neutral-900 bg-white">
+                        <span class="w-5 h-5 rounded-full bg-neutral-900"></span>
+                    </div>
+                    <div
+                        class="hidden md:block absolute left-1/2 top-[22px] h-[calc(100%+3rem)] border-l-2 border-dashed border-neutral-900">
+                    </div>
+
+                    <div class="md:pr-16">
+                        <h3 class="font-lufga text-2xl font-semibold">Sugee Pvt limited, Mumbai</h3>
+                        <p class="font-inter text-grey-400 mt-2">Sep 2020 - July 2023</p>
+                    </div>
+                    <div class="md:pl-16">
+                        <h3 class="font-lufga text-2xl font-semibold">UI/UX Designer</h3>
+                        <p class="text-grey-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Duis
+                            lacus nunc, posuere in justo vulputate, bibendum sodales</p>
+                    </div>
+                </div>
+
+                <!-- Expérience 3 (dernier : pas de trait en dessous) -->
+                <div class="relative grid md:grid-cols-2 gap-4 md:gap-0">
+
+                    <!-- Rond orange (centre) -->
+                    <div
+                        class="hidden md:flex absolute top-1 left-1/2 -translate-x-1/2 z-10 w-9 h-9 items-center justify-center rounded-full border border-dashed border-neutral-900 bg-white">
+                        <span class="w-5 h-5 rounded-full bg-orange"></span>
+                    </div>
+
+                    <div class="md:pr-16">
+                        <h3 class="font-lufga text-2xl font-semibold">Cinetstox, Mumbai</h3>
+                        <p class="font-inter text-grey-400 mt-2">Sep 2023</p>
+                    </div>
+                    <div class="md:pl-16">
+                        <h3 class="font-lufga text-2xl font-semibold">Lead UX Designer</h3>
+                        <p class="text-grey-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Duis
+                            lacus nunc, posuere in justo vulputate, bibendum sodales</p>
                     </div>
                 </div>
 
             </div>
-
-            <!-- Points (décoration) -->
-            <div class="mt-10 flex items-center justify-center gap-2">
-                <span class="w-12 h-3 rounded-full bg-orange"></span>
-                <span class="w-3 h-3 rounded-full bg-white"></span>
-                <span class="w-3 h-3 rounded-full bg-white"></span>
-                <span class="w-3 h-3 rounded-full bg-white"></span>
-            </div>
-
-        </div>
-    </section>
+        </section>
 
 
-    <!--  WORK EXPERIENCE  -->
-    <section id="resume" class="max-w-6xl mx-auto px-5 py-20">
+        <!--  WHY HIRE ME  -->
+        <section id="about" class="bg-grey-100 py-16">
+            <div class="max-w-6xl mx-auto  grid grid-cols-2 items-center">
 
-        <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-center">My <span class="text-orange">Work
-                Experience</span></h2>
-
-        <div class="mt-16 space-y-12">
-
-            <!-- Expérience 1 -->
-            <div class="grid md:grid-cols-2 gap-4 md:gap-20">
                 <div>
-                    <h3 class="font-lufga text-2xl font-semibold">Cognizant, Mumbai</h3>
-                    <p class="font-inter text-grey-400 mt-2">Sep 2016 - July 2020</p>
+                    <img src="./assets/Mask group.png" alt="Jenny" class="w-full h-96 object-contain">
                 </div>
-                <div class="border-l-2 border-dashed border-orange pl-6">
-                    <h3 class="font-lufga text-2xl font-semibold">Experience Designer</h3>
-                    <p class="text-grey-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
-                        nunc, posuere in justo vulputate, bibendum sodales</p>
-                </div>
-            </div>
 
-            <!-- Expérience 2 -->
-            <div class="grid md:grid-cols-2 gap-4 md:gap-20">
                 <div>
-                    <h3 class="font-lufga text-2xl font-semibold">Sugee Pvt limited, Mumbai</h3>
-                    <p class="font-inter text-grey-400 mt-2">Sep 2020 - July 2023</p>
-                </div>
-                <div class="border-l-2 border-dashed border-heading pl-6">
-                    <h3 class="font-lufga text-2xl font-semibold">UI/UX Designer</h3>
-                    <p class="text-grey-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
-                        nunc, posuere in justo vulputate, bibendum sodales</p>
-                </div>
-            </div>
+                    <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Why <span class="text-orange">Hire
+                            me</span>?
+                    </h2>
+                    <p class="text-grey-400 mt-6 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                        lacus nunc, posuere in justo vulputate, bibendum sodales</p>
 
-            <!-- Expérience 3 -->
-            <div class="grid md:grid-cols-2 gap-4 md:gap-20">
-                <div>
-                    <h3 class="font-lufga text-2xl font-semibold">Cinetstox, Mumbai</h3>
-                    <p class="font-inter text-grey-400 mt-2">Sep 2023</p>
-                </div>
-                <div class="border-l-2 border-dashed border-orange pl-6">
-                    <h3 class="font-lufga text-2xl font-semibold">Lead UX Designer</h3>
-                    <p class="text-grey-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
-                        nunc, posuere in justo vulputate, bibendum sodales</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!--  WHY HIRE ME  -->
-    <section id="about" class="bg-grey-100 py-16">
-        <div class="max-w-6xl mx-auto  grid grid-cols-2 items-center">
-
-            <div>
-                <img src="./assets/Mask group.png" alt="Jenny" class="w-full h-96 object-contain">
-            </div>
-
-            <div>
-                <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Why <span class="text-orange">Hire me</span>?
-                </h2>
-                <p class="text-grey-400 mt-6 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                    lacus nunc, posuere in justo vulputate, bibendum sodales</p>
-
-                <div class="flex gap-16 mt-10">
-                    <div>
-                        <p class="font-lufga text-3xl font-semibold text-neutral-900">450+</p>
-                        <p class="font-inter text-grey-400">Project Completed</p>
+                    <div class="flex gap-16 mt-10">
+                        <div>
+                            <p class="font-lufga text-3xl font-semibold text-neutral-900">450+</p>
+                            <p class="font-inter text-grey-400">Project Completed</p>
+                        </div>
+                        <div>
+                            <p class="font-lufga text-3xl font-semibold text-neutral-900">450+</p>
+                            <p class="font-inter text-grey-400">Project Completed</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="font-lufga text-3xl font-semibold text-neutral-900">450+</p>
-                        <p class="font-inter text-grey-400">Project Completed</p>
-                    </div>
+
+                    <a href="#contact"
+                        class="inline-block border border-neutral-900 rounded-3xl px-10 py-4 text-xl mt-10 hover:bg-neutral-900 hover:text-white">Hire
+                        me</a>
                 </div>
 
-                <a href="#contact"
-                    class="inline-block border border-neutral-900 rounded-3xl px-10 py-4 text-xl mt-10 hover:bg-neutral-900 hover:text-white">Hire
-                    me</a>
+            </div>
+        </section>
+
+
+        <!--  PORTFOLIO  -->
+        <section id="portfolio" class="max-w-6xl mx-auto px-5 py-20">
+
+            <div class="flex flex-wrap items-end justify-between gap-6">
+                <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Lets have a look at<br>my <span
+                        class="text-orange">Portfolio</span></h2>
+                <a href="#" class="bg-orange text-white rounded-full px-7 py-3">See All</a>
             </div>
 
-        </div>
-    </section>
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <img src="./assets/Frame 26.png" alt="Projet 1"
+                    class="w-full h-80 object-cover rounded-3xl bg-grey-100">
+                <img src="./assets/Frame 26.png" alt="Projet 2"
+                    class="w-full h-80 object-cover rounded-3xl bg-grey-100">
+            </div>
 
+            <!-- Points déc ration -->
+            <div class="flex justify-center gap-2 mt-8">
+                <span class="w-12 h-3 bg-orange rounded-full"></span>
+                <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
+            </div>
 
-    <!--  PORTFOLIO  -->
-    <section id="portfolio" class="max-w-6xl mx-auto px-5 py-20">
-
-        <div class="flex flex-wrap items-end justify-between gap-6">
-            <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Lets have a look at<br>my <span
-                    class="text-orange">Portfolio</span></h2>
-            <a href="#" class="bg-orange text-white rounded-full px-7 py-3">See All</a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <img src="./assets/Frame 26.png" alt="Projet 1" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
-            <img src="./assets/Frame 26.png" alt="Projet 2" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
-        </div>
-
-        <!-- Points déc ration -->
-        <div class="flex justify-center gap-2 mt-8">
-            <span class="w-12 h-3 bg-orange rounded-full"></span>
-            <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
-            <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
-            <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
-        </div>
-
-        <!-- Catégories -->
-        <div class="flex flex-wrap justify-center gap-3 mt-8">
-            <a href="#" class="bg-orange text-white rounded-full px-6 py-3">Landing Page</a>
-            <a href="#" class="bg-grey-100 rounded-full px-6 py-3">Product Design</a>
-            <a href="#" class="bg-grey-100 rounded-full px-6 py-3">Animation</a>
-            <a href="#" class="bg-grey-100 rounded-full px-6 py-3">Glassmorphism</a>
-            <a href="#" class="bg-grey-100 rounded-full px-6 py-3">Cards</a>
-        </div>
-
-        <div class="text-center mt-12">
-            <h3
-                class="font-lufga text-2xl lg:text-4xl font-semibold items-center text-center flex justify-center gap-[30px]">
-                Lirante - Food Delivery Solution
-
+            <!-- Catégories -->
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <a href="#" class="bg-grey-100 hover:bg-orange hover:text-white rounded-full px-6 py-3">Landing Page</a>
                 <a href="#"
-                    class="inline-flex w-12 h-12 hover:bg-heading bg-orange rounded-full flex items-center justify-center transition">
-                    <img src="./assets/up right.png" alt="up-right">
-                </a>
-
-            </h3>
-            <p class="text-grey-400 max-w-2xl mx-auto mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis lacus nunc, posuere in justo vulputate, bibendum sodales.</p>
-        </div>
-
-    </section>
-
-
-    <!--  TESTIMONIALS  -->
-    <section class="bg-neutral-900 bg-[urlimages/testimonials bg.png] bg-cover rounded-[40px] px-5 py-16">
-        <div class="max-w-6xl mx-auto">
-
-            <div class="text-center">
-                <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-white">Testimonials That<br>Speak to <span
-                        class="text-orange">My Results</span></h2>
-                <p class="text-white/80 max-w-xl mx-auto mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis lacus nunc, posuere in justo vulputate, bibendum sodales</p>
+                    class="bg-grey-100 hover:bg-orange hover:text-white hover:underline  rounded-full px-6 py-3">Product
+                    Design</a>
+                <a href="#"
+                    class="bg-grey-100 hover:bg-orange hover:text-white hover:underline  rounded-full px-6 py-3">Animation</a>
+                <a href="#"
+                    class="bg-grey-100 hover:bg-orange hover:text-white hover:underline  rounded-full px-6 py-3">Glassmorphism</a>
+                <a href="#"
+                    class="bg-grey-100 hover:bg-orange hover:text-white hover:underline  rounded-full px-6 py-3">Cards</a>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="text-center mt-12">
+                <h3
+                    class="font-lufga text-2xl lg:text-4xl font-semibold items-center text-center flex justify-center gap-[30px]">
+                    Lirante - Food Delivery Solution
 
-                <!-- Avis 1 -->
-                <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                            class="w-14 h-14 rounded-full bg-orange-light">
-                        <div>
-                            <p class="font-semibold text-lg">Jayesh Patil</p>
-                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                        </div>
-                    </div>
-                    <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                    <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                        vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
-                </div>
+                    <a href="#"
+                        class="inline-flex w-12 h-12 hover:bg-heading bg-orange rounded-full flex items-center justify-center transition">
+                        <img src="./assets/up right.png" alt="up-right">
+                    </a>
 
-                <!-- Avis 2 -->
-                <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                            class="w-14 h-14 rounded-full bg-orange-light">
-                        <div>
-                            <p class="font-semibold text-lg">Jayesh Patil</p>
-                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                        </div>
-                    </div>
-                    <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                    <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                        vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
-                </div>
-
-                <!-- Avis 3 -->
-                <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                            class="w-14 h-14 rounded-full bg-orange-light">
-                        <div>
-                            <p class="font-semibold text-lg">Jayesh Patil</p>
-                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                        </div>
-                    </div>
-                    <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                    <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                        vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
-                </div>
-
+                </h3>
+                <p class="text-grey-400 max-w-2xl mx-auto mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis lacus nunc, posuere in justo vulputate, bibendum sodales.</p>
             </div>
-        </div>
-    </section>
+
+        </section>
 
 
-    <!--  CONTACT  -->
-    <section id="contact" class="max-w-6xl mx-auto px-5 py-20 text-center
+        <!--  TESTIMONIALS  -->
+        <section class="bg-neutral-900 bg-[urlimages/testimonials bg.png] bg-cover rounded-[40px] px-5 py-16">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="text-center">
+                    <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-white">Testimonials That<br>Speak to
+                        <span class="text-orange">My Results</span>
+                    </h2>
+                    <p class="text-white/80 max-w-xl mx-auto mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Duis lacus nunc, posuere in justo vulputate, bibendum sodales</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+
+                    <!-- Avis 1 -->
+                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                                class="w-14 h-14 rounded-full bg-orange-light">
+                            <div>
+                                <p class="font-semibold text-lg">Jayesh Patil</p>
+                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
+                            </div>
+                        </div>
+                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
+                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
+                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <!-- Avis 2 -->
+                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                                class="w-14 h-14 rounded-full bg-orange-light">
+                            <div>
+                                <p class="font-semibold text-lg">Jayesh Patil</p>
+                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
+                            </div>
+                        </div>
+                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
+                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
+                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <!-- Avis 3 -->
+                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                                class="w-14 h-14 rounded-full bg-orange-light">
+                            <div>
+                                <p class="font-semibold text-lg">Jayesh Patil</p>
+                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
+                            </div>
+                        </div>
+                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
+                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
+                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--  CONTACT  -->
+        <section id="contact" class="max-w-6xl mx-auto px-5 py-20 text-center
     bg-[url('./assets/Frame_77.png')] bg-cover bg-center bg-no-repeat rounded-[40px]">
-        <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Have an Awesome Project<br>Idea? <span
-                class="text-orange">Let's Discuss</span></h2>
+            <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Have an Awesome Project<br>Idea? <span
+                    class="text-orange">Let's Discuss</span></h2>
 
-        <form action="#"
-            class="flex items-center gap-2 max-w-3xl mx-auto mt-10 border border-orange-light rounded-full p-2">
-            <span
-                class="w-12 h-12 bg-orange-light/30 text-orange rounded-full flex items-center justify-center">✉</span>
-            <input type="email" placeholder="Enter Email Address" required
-                class="flex-1 min-w-0 font-inter px-2 py-3 outline-none">
-            <button type="submit" class="bg-orange text-white rounded-full px-10 py-4">Send</button>
-        </form>
+            <form action="#"
+                class="flex items-center gap-2 max-w-3xl mx-auto mt-10 border border-orange-light rounded-full p-2">
+                <span
+                    class="w-12 h-12 bg-orange-light/30 text-orange rounded-full flex items-center justify-center">✉</span>
+                <input type="email" placeholder="Enter Email Address" required
+                    class="flex-1 min-w-0 font-inter px-2 py-3 outline-none">
+                <button type="submit" class="bg-orange text-white rounded-full px-10 py-4">Send</button>
+            </form>
 
-        <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-6 font-inter text-sm">
-            <p><span class="text-orange">★</span> 4.9/5 Average Ratings</p>
-            <p><span class="text-orange">★</span> 25+ Winning Awards</p>
-            <p><span class="text-orange">✓</span> Certified Product Designer</p>
-        </div>
-
-    </section>
-
-
-    <!--  BANDEAU  -->
-    <div class="overflow-hidden py-10">
-        <p class="bg-orange text-white text-2xl lg:text-3xl font-medium whitespace-nowrap py-4 -rotate-2 scale-110">
-            UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Research ✦ UX Design ✦ App Design ✦ Dashboard ✦
-            Wireframe ✦ User Research
-        </p>
-    </div>
-
-
-    <!--  BLOG  -->
-    <section id="blog" class="max-w-6xl mx-auto px-5 py-20">
-
-        <div class="flex flex-wrap items-end justify-between gap-6">
-            <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">From my<br>blog post</h2>
-            <a href="#" class="bg-orange text-white rounded-full px-7 py-3">See All</a>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mt-12">
-
-            <!-- Article 1 -->
-            <div class="group">
-                <div class="relative">
-                    <img src="./assets/Rectangle 6.png" alt="Article 1"
-                        class="notch w-full h-80 object-cover rounded-[32px]">
-                    <a href="#"
-                        class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                        <img src="./assets/up right.png" alt="">
-                    </a>
-                </div>
-                <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">UI/UX
-                    Design</span>
-                <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
-                        class="text-orange">•</span> 10 Nov, 2023</p>
-                <h3 class="font-lufga text-2xl mt-3">Design Unraveled: Behind the Scenes of UI/UX Magic</h3>
+            <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-6 font-inter text-sm">
+                <p><span class="text-orange">★</span> 4.9/5 Average Ratings</p>
+                <p><span class="text-orange">★</span> 25+ Winning Awards</p>
+                <p><span class="text-orange">✓</span> Certified Product Designer</p>
             </div>
 
-            <!-- Article 2 -->
-            <div class="group">
-                <div class="relative">
-                    <img src="./assets/Rectangle 6 (1).png" alt="Article 2"
-                        class="notch w-full h-80 object-cover rounded-[32px]">
-                    <a href="#"
-                        class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                        <img src="./assets/up right.png" alt="">
-                    </a>
-                </div>
-                <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App Design</span>
-                <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
-                        class="text-orange">•</span> 09 Oct, 2023</p>
-                <h3 class="font-lufga text-2xl mt-3">Sugee: Loan Management System for Rural Sector.</h3>
-            </div>
+        </section>
 
-            <!-- Article 3 -->
-            <div class="group">
-                <div class="relative">
-                    <img src="./assets/Rectangle 6 (2).png" alt="Article 3"
-                        class="notch w-full h-80 object-cover rounded-[32px]">
-                    <a href="#"
-                        class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                        <img src="./assets/up right.png" alt="">
-                    </a>
-                </div>
-                <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App Design</span>
-                <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
-                        class="text-orange">•</span> 15 Aug, 2023</p>
-                <h3 class="font-lufga text-2xl mt-3">Cinetrade: Innovative way to invest in Digital Media</h3>
-            </div>
 
+        <!--  BANDEAU  -->
+        <div class="overflow-hidden py-10">
+            <p class="bg-orange text-white text-2xl lg:text-3xl font-medium whitespace-nowrap py-4 -rotate-2 scale-110">
+                UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Research ✦ UX Design ✦ App Design ✦ Dashboard ✦
+                Wireframe ✦ User Research
+            </p>
         </div>
-    </section>
+
+
+        <!--  BLOG  -->
+        <section id="blog" class="max-w-6xl mx-auto px-5 py-20">
+
+            <div class="flex flex-wrap items-end justify-between gap-6">
+                <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">From my<br>blog post</h2>
+                <a href="#" class="bg-orange text-white rounded-full px-7 py-3">See All</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+                <!-- Article 1 -->
+                <div class="group">
+                    <div class="relative">
+                        <img src="./assets/Rectangle 6.png" alt="Article 1"
+                            class="w-full h-80 object-cover rounded-[32px]">
+                        <a href="#"
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
+                    </div>
+                    <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">UI/UX
+                        Design</span>
+                    <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
+                            class="text-orange">•</span> 10 Nov, 2023</p>
+                    <h3 class="font-lufga text-2xl mt-3">Design Unraveled: Behind the Scenes of UI/UX Magic</h3>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="group">
+                    <div class="relative">
+                        <img src="./assets/Rectangle 6 (1).png" alt="Article 2"
+                            class="w-full h-80 object-cover rounded-[32px]">
+                        <a href="#"
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
+                    </div>
+                    <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App
+                        Design</span>
+                    <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
+                            class="text-orange">•</span> 09 Oct, 2023</p>
+                    <h3 class="font-lufga text-2xl mt-3">Sugee: Loan Management System for Rural Sector.</h3>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="group">
+                    <div class="relative">
+                        <img src="./assets/Rectangle 6 (2).png" alt="Article 3"
+                            class="w-full h-80 object-cover rounded-[32px]">
+                        <a href="#"
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
+                    </div>
+                    <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App
+                        Design</span>
+                    <p class="font-inter text-sm mt-4"><span class="text-orange">•</span> Jayesh Patil &nbsp; <span
+                            class="text-orange">•</span> 15 Aug, 2023</p>
+                    <h3 class="font-lufga text-2xl mt-3">Cinetrade: Innovative way to invest in Digital Media</h3>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
 
     <!--  FOOTER  -->
