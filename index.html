@@ -35,12 +35,17 @@
             --font-inter: "Inter", sans-serif;
             --font-urbanist: "Urbanist", sans-serif;
         }
+        /* Encoche transparente autour du bouton (bouton w-20 = 80px) */
+        .notch {
+           -webkit-mask: radial-gradient(circle at calc(100% - 40px) calc(100% - 40px), transparent 47px, #000 48px);
+           mask: radial-gradient(circle at calc(100% - 0px) calc(100% - 40px), transparent 47px, #000 48px);
+    }
     </style>
 </head>
 
 <body class="bg-white font-urbanist text-heading">
 
-    <!-- ================= NAVBAR ================= -->
+    <!--  NAVBAR  -->
     <header class="max-w-6xl mx-auto px-5 pt-5">
         <nav
             class="flex flex-wrap items-center justify-center lg:justify-between gap-2 bg-neutral-900 text-white rounded-3xl lg:rounded-full p-[10px]">
@@ -72,7 +77,7 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <!--  HERO  -->
     <section id="home" class="max-w-6xl mx-auto px-5 pt-14 text-center space-y-[10px]">
 
         <!-- Badge Hello + vecteur en haut à droite -->
@@ -87,7 +92,7 @@
             <!-- Vecteur en bas à gauche de "Product Designer" -->
             <span class="relative inline-block">
                 Product Designer
-                <img src="./assets/Vector 1.png" alt="" class="absolute -bottom-10 -left-14 w-12 rotate-180">
+                <img src="./assets/Mask group.png" alt="" class="absolute -bottom-10 -left-14 w-12 rotate-180">
             </span>
         </h1>
         <div class="grid lg:grid-cols-4 items-center gap-8">
@@ -110,15 +115,15 @@
             <!-- Photo -->
             <div class="relative lg:col-span-2 lg:-mt-20 flex justify-center items-end">
 
-                <!-- 1. Demi-cercle orange (derrière) -->
+                <!--  Demi-cercle orange d rrière -->
                 <div
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 z-0 w-90 h-50 lg:w-[540px] lg:h-[270px] bg-orange-light rounded-t-full">
                 </div>
 
-                <!-- 2. Photo (au milieu) -->
+                <!--  Photo au milieu -->
                 <img src="/assets/section1-image.png" alt="Jenny" class="relative z-10 object-contain">
 
-                <!-- 3. Boutons (devant) -->
+                <!-- Boutons  devant -->
                 <div
                     class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 p-2 rounded-full border border-white/50 bg-white/10 backdrop-blur-md">
                     <a href="#portfolio" class="bg-orange text-white rounded-full px-6 py-3 whitespace-nowrap">Portfolio
@@ -147,92 +152,132 @@
         </div>
     </section>
 
-    <!-- ================= SERVICES ================= -->
+    <!--  SERVICES  -->
     <section id="services"
-        class="relative overflow-hidden bg-neutral-900 bg-[url(./assets/services-bg.png)] bg-cover rounded-[40px] px-5 py-16">
+        class="relative overflow-hidden bg-neutral-900 bg-[url(./assets/services-bg.png)] bg-cover bg-center rounded-[40px] px-6 py-14 sm:px-10 lg:px-14 lg:py-16">
 
-        <!-- ===== Formes jaunes (décoration, derrière) ===== -->
-        <!-- 1. En haut à gauche (coupée par le bord gauche) -->
+        <!-- ===== Formes jaunes (décoration, derrière les cartes) ===== -->
         <img src="./assets/light-yellow-abstract-background.png" alt=""
             class="absolute top-[15%] -left-[4%] w-[20%] z-0 pointer-events-none">
-
-        <!-- 2. En haut, au centre -->
         <img src="./assets/light-yellow-abstract-background.png" alt=""
             class="absolute top-[10%] left-[39%] w-[12%] z-0 pointer-events-none">
-
-        <!-- 3. À droite (grande, coupée par le bord droit et le bas) -->
         <img src="./assets/light-yellow-abstract-background.png" alt=""
-            class="absolute top-[30%] -right-[6%] w-[28%] z-0 pointer-events-none">
+            class="absolute top-[45%] -right-[4%] w-[30%] z-0 pointer-events-none">
 
         <!-- ===== Contenu (devant) ===== -->
         <div class="relative z-10 max-w-6xl mx-auto">
 
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
-                <h2 class="font-lufga text-4xl lg:text-5xl font-medium text-white">My <span
-                        class="text-orange">Services</span></h2>
-                <p class="max-w-md text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
-                    posuere in justo vulputate, bibendum sodales</p>
+            <!-- En-tête -->
+            <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <h2 class="font-lufga text-4xl lg:text-5xl font-medium text-white">
+                    My <span class="text-orange">Services</span>
+                </h2>
+                <p class="max-w-md text-sm lg:text-base leading-relaxed text-white/90">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
+                    posuere in justo vulputate, bibendum sodales
+                </p>
             </div>
 
+            <!-- Cartes -->
             <div class="grid md:grid-cols-3 gap-6">
 
                 <!-- Carte 1 -->
-                <div class="border border-white/30 bg-white/5 backdrop-blur-md rounded-3xl">
-                    <h3 class="font-lufga text-2xl text-white p-6 border-b border-white/30">UI/ UX Design</h3>
-                    <div class="relative mt-14">
-                        <!-- Couches empilées derrière l'image -->
-                        <div class="absolute -top-6 left-8 right-8 h-12 bg-white/20 rounded-t-3xl"></div>
-                        <div class="absolute -top-3 left-4 right-4 h-12 bg-white/40 rounded-t-3xl"></div>
-                        <!-- Image -->
-                        <img src="./assets/image-card1.png" alt="UI/UX Design"
-                            class="relative w-full h-64 object-cover rounded-3xl">
+                <div class="group relative">
+                    <!-- Verre flouté (s'arrête avant le bas de l'image) -->
+                    <div
+                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                    </div>
+
+                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">UI/ UX
+                        Design</h3>
+                    <div class="relative h-px w-full bg-white/30"></div>
+
+                    <div class="relative mt-10">
+                        <!-- Calques empilés derrière l'image -->
+                        <div class="absolute inset-x-6 -top-5 h-10 rounded-t-3xl bg-white/20"></div>
+                        <div class="absolute inset-x-3 -top-2.5 h-10 rounded-t-3xl bg-white/40"></div>
+
+                        <!-- Image avec encoche transparente -->
+                        <div class="notch relative h-64 overflow-hidden rounded-[32px] bg-grey-100">
+                            <img src="./assets/image-card1.png" alt="UI/UX Design"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
                         <!-- Bouton flèche -->
                         <a href="#"
-                            class="absolute bottom-0 right-0 w-24 h-24 bg-heading hover:bg-orange border-8 border-neutral-900 text-white text-3xl rounded-full flex items-center justify-center">↗</a>
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
                     </div>
                 </div>
 
                 <!-- Carte 2 -->
-                <div class="border border-white/30 bg-white/5 backdrop-blur-md rounded-3xl">
-                    <h3 class="font-lufga text-2xl text-white p-6 border-b border-white/30">Web Design</h3>
-                    <div class="relative mt-14">
-                        <div class="absolute -top-6 left-8 right-8 h-12 bg-white/20 rounded-t-3xl"></div>
-                        <div class="absolute -top-3 left-4 right-4 h-12 bg-white/40 rounded-t-3xl"></div>
-                        <img src="./assets/image-card2.png" alt="Web Design"
-                            class="relative w-full h-64 object-cover rounded-3xl">
+                <div class="group relative">
+                    <div
+                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                    </div>
+
+                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">Web
+                        Design</h3>
+                    <div class="relative h-px w-full bg-white/30"></div>
+
+                    <div class="relative mt-10">
+                        <div class="absolute inset-x-6 -top-5 h-10 rounded-t-3xl bg-white/20"></div>
+                        <div class="absolute inset-x-3 -top-2.5 h-10 rounded-t-3xl bg-white/40"></div>
+
+                        <div class="notch relative h-64 overflow-hidden rounded-[32px] bg-white">
+                            <img src="./assets/image-card2.png" alt="Web Design"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
                         <a href="#"
-                            class="absolute bottom-0 right-0 w-24 h-24 bg-heading hover:bg-orange border-8 border-neutral-900 text-white text-3xl rounded-full flex items-center justify-center">↗</a>
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
                     </div>
                 </div>
 
                 <!-- Carte 3 -->
-                <div class="border border-white/30 bg-white/5 backdrop-blur-md rounded-3xl">
-                    <h3 class="font-lufga text-2xl text-white p-6 border-b border-white/30">Landing Page</h3>
-                    <div class="relative mt-14">
-                        <div class="absolute -top-6 left-8 right-8 h-12 bg-white/20 rounded-t-3xl"></div>
-                        <div class="absolute -top-3 left-4 right-4 h-12 bg-white/40 rounded-t-3xl"></div>
-                        <img src="./assets/image-card3.png" alt="Landing Page"
-                            class="relative w-full h-64 object-cover rounded-3xl">
+                <div class="group relative">
+                    <div
+                        class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                    </div>
+
+                    <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                        Landing Page</h3>
+                    <div class="relative h-px w-full bg-white/30"></div>
+
+                    <div class="relative mt-10">
+                        <div class="absolute inset-x-6 -top-5 h-10 rounded-t-3xl bg-white/20"></div>
+                        <div class="absolute inset-x-3 -top-2.5 h-10 rounded-t-3xl bg-white/40"></div>
+
+                        <div class="notch relative h-64 overflow-hidden rounded-[32px] bg-grey-100">
+                            <img src="./assets/image-card3.png" alt="Landing Page"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
                         <a href="#"
-                            class="absolute bottom-0 right-0 w-24 h-24 bg-heading hover:bg-orange border-8 border-neutral-900 text-white text-3xl rounded-full flex items-center justify-center">↗</a>
+                            class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                            <img src="./assets/up right.png" alt="">
+                        </a>
                     </div>
                 </div>
 
             </div>
 
             <!-- Points (décoration) -->
-            <div class="flex justify-center gap-2 mt-10">
-                <span class="w-12 h-3 bg-orange rounded-full"></span>
-                <span class="w-3 h-3 bg-white rounded-full"></span>
-                <span class="w-3 h-3 bg-white rounded-full"></span>
-                <span class="w-3 h-3 bg-white rounded-full"></span>
+            <div class="mt-10 flex items-center justify-center gap-2">
+                <span class="w-12 h-3 rounded-full bg-orange"></span>
+                <span class="w-3 h-3 rounded-full bg-white"></span>
+                <span class="w-3 h-3 rounded-full bg-white"></span>
+                <span class="w-3 h-3 rounded-full bg-white"></span>
             </div>
 
         </div>
     </section>
 
 
-    <!-- ================= WORK EXPERIENCE ================= -->
+    <!--  WORK EXPERIENCE  -->
     <section id="resume" class="max-w-6xl mx-auto px-5 py-20">
 
         <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-center">My <span class="text-orange">Work
@@ -283,12 +328,12 @@
     </section>
 
 
-    <!-- ================= WHY HIRE ME ================= -->
+    <!--  WHY HIRE ME  -->
     <section id="about" class="bg-grey-100 py-16">
-        <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 items-center gap-12">
+        <div class="max-w-6xl mx-auto  grid grid-cols-2 items-center">
 
-            <div class="bg-orange-light rounded-[60px] rounded-tr-[150px]">
-                <img src="images/hire-me.png" alt="Jenny" class="w-full h-96 object-contain">
+            <div>
+                <img src="./assets/Mask group.png" alt="Jenny" class="w-full h-96 object-contain">
             </div>
 
             <div>
@@ -317,7 +362,7 @@
     </section>
 
 
-    <!-- ================= PORTFOLIO ================= -->
+    <!--  PORTFOLIO  -->
     <section id="portfolio" class="max-w-6xl mx-auto px-5 py-20">
 
         <div class="flex flex-wrap items-end justify-between gap-6">
@@ -327,11 +372,11 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <img src="images/portfolio-1.png" alt="Projet 1" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
-            <img src="images/portfolio-2.png" alt="Projet 2" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
+            <img src="./assets/Frame 26.png" alt="Projet 1" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
+            <img src="./assets/Frame 26.png" alt="Projet 2" class="w-full h-80 object-cover rounded-3xl bg-grey-100">
         </div>
 
-        <!-- Points (décoration) -->
+        <!-- Points déc ration -->
         <div class="flex justify-center gap-2 mt-8">
             <span class="w-12 h-3 bg-orange rounded-full"></span>
             <span class="w-3 h-3 bg-grey-300 rounded-full"></span>
@@ -349,10 +394,14 @@
         </div>
 
         <div class="text-center mt-12">
-            <h3 class="font-lufga text-2xl lg:text-4xl font-semibold">
+            <h3 class="font-lufga text-2xl lg:text-4xl font-semibold items-center text-center flex justify-center gap-[30px]">
                 Lirante - Food Delivery Solution
+                
                 <a href="#"
-                    class="inline-flex w-12 h-12 bg-orange text-white rounded-full items-center justify-center ml-2">↗</a>
+                    class="inline-flex w-12 h-12 hover:bg-heading bg-orange rounded-full flex items-center justify-center transition">
+                    <img src="./assets/up right.png" alt="up-right">
+                </a>
+
             </h3>
             <p class="text-grey-400 max-w-2xl mx-auto mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis lacus nunc, posuere in justo vulputate, bibendum sodales.</p>
@@ -361,8 +410,8 @@
     </section>
 
 
-    <!-- ================= TESTIMONIALS ================= -->
-    <section class="bg-neutral-900 bg-[url(images/testimonials-bg.png)] bg-cover rounded-[40px] px-5 py-16">
+    <!--  TESTIMONIALS  -->
+    <section class="bg-neutral-900 bg-[urlimages/testimonials bg.png] bg-cover rounded-[40px] px-5 py-16">
         <div class="max-w-6xl mx-auto">
 
             <div class="text-center">
@@ -424,7 +473,7 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
+    <!--  CONTACT  -->
     <section id="contact" class="max-w-6xl mx-auto px-5 py-20 text-center">
 
         <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Have an Awesome Project<br>Idea? <span
@@ -448,7 +497,7 @@
     </section>
 
 
-    <!-- ================= BANDEAU ================= -->
+    <!--  BANDEAU  -->
     <div class="overflow-hidden py-10">
         <p class="bg-orange text-white text-2xl lg:text-3xl font-medium whitespace-nowrap py-4 -rotate-2 scale-110">
             UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Research ✦ UX Design ✦ App Design ✦ Dashboard ✦
@@ -457,7 +506,7 @@
     </div>
 
 
-    <!-- ================= BLOG ================= -->
+    <!--  BLOG  -->
     <section id="blog" class="max-w-6xl mx-auto px-5 py-20">
 
         <div class="flex flex-wrap items-end justify-between gap-6">
@@ -514,7 +563,7 @@
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!--  FOOTER  -->
     <footer class="bg-neutral-900 text-white rounded-t-[40px]">
         <div class="max-w-6xl mx-auto px-5 pt-14 pb-10">
 
