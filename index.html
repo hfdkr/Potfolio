@@ -36,10 +36,25 @@
             --font-urbanist: "Urbanist", sans-serif;
         }
         /* Encoche transparente autour du bouton (bouton w-20 = 80px) */
+        /* Image découpée en cercle autour du bouton (bouton w-20 = 80px, jeu de 12px) */
         .notch {
-           -webkit-mask: radial-gradient(circle at calc(100% - 40px) calc(100% - 40px), transparent 47px, #000 48px);
-           mask: radial-gradient(circle at calc(100% - 0px) calc(100% - 40px), transparent 47px, #000 48px);
-    }
+            clip-path: shape(
+             from 0 32px,
+             arc to 32px 0 of 32px cw,                                        /* coin haut-gauche */
+             hline to calc(100% - 32px),
+             arc to 100% 32px of 32px cw,                                     /* coin haut-droit */
+             vline to calc(100% - 112px),
+             arc to calc(100% - 20px) calc(100% - 92px) of 20px cw,           /* angle arrondi (bord droit) */
+             hline to calc(100% - 40px),
+             arc to calc(100% - 92px) calc(100% - 40px) of 52px ccw,          /* arc concave : suit le cercle du bouton */
+             vline to calc(100% - 20px),
+             arc to calc(100% - 112px) 100% of 20px cw,                       /* angle arrondi (bord bas) */
+             hline to 32px,
+             arc to 0 calc(100% - 32px) of 32px cw,                           /* coin bas-gauche */
+             vline to 32px,
+             close
+            );
+}
     </style>
 </head>
 
@@ -576,8 +591,10 @@
 
             <div class="flex flex-wrap items-center justify-between gap-6 border-b border-white/20 pb-10">
                 <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Lets Connect there</h2>
-                <a href="#contact" class="bg-orange rounded-[10px] w-[200px] h-[62px] text-lg flex gap-[10px] justify-center items-center">Hire me <img
-                        src="./assets/up right.png" alt=""></a>
+                <a href="#"
+                    class="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-2xl font-semibold">Hire
+                    me
+                    <img src="./assets/up right.png" alt="" aria-hidden="true" class="h-7 w-7 object-contain" /></a>
             </div>
 
             <div class="grid md:grid-cols-4 gap-10 pt-10">
