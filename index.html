@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Volkhov:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet" />
+
+    <title>Portfolio -Product</title>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+        @theme {
+            /*  color */
+            
+             --color-orange: #FD853A;
+             --color-neutral-900: #171717;
+             --color-heading: #344054;
+             --color-white: #FFFFFF;
+             --color-grey-300: #D0D5DD;
+             /* font */
+             --font-urbanist: "Urbanist", sans-serif;
+             
+    }
+    </style>
+</head>
+
+<body>
+     <header class="sticky top-4 z-50 container-x">
+    <nav class="flex items-center justify-between rounded-full bg-ink px-3 py-3 text-white shadow-lg">
+      <!-- Liens gauche -->
+      <ul class="hidden flex-1 items-center gap-2 lg:flex">
+        <li><a href="#home" class="rounded-full bg-brand px-8 py-3.5 font-semibold">Home</a></li>
+        <li><a href="#about" class="rounded-full px-6 py-3.5 transition hover:text-brand">About</a></li>
+        <li><a href="#services" class="rounded-full px-6 py-3.5 transition hover:text-brand">Service</a></li>
+      </ul>
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2 pl-3 lg:pl-0">
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-brand text-sm font-bold">JC</span>
+        <span class="text-xl font-bold tracking-wide">JCREA</span>
+      </a>
+
+      <!-- Liens droite -->
+      <ul class="hidden flex-1 items-center justify-end gap-2 lg:flex">
+        <li><a href="#resume" class="rounded-full px-6 py-3.5 transition hover:text-brand">Resume</a></li>
+        <li><a href="#portfolio" class="rounded-full px-6 py-3.5 transition hover:text-brand">Project</a></li>
+        <li><a href="#contact" class="rounded-full px-6 py-3.5 transition hover:text-brand">Contact</a></li>
+      </ul>
+
+      <!-- Bouton menu mobile -->
+      <button id="menu-btn" class="grid h-11 w-11 place-items-center rounded-full bg-brand lg:hidden" aria-label="Ouvrir le menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <ul id="mobile-menu" class="mt-2 hidden flex-col gap-1 rounded-3xl bg-ink p-4 text-white lg:hidden">
+      <li><a href="#home" class="block rounded-full bg-brand px-5 py-3 font-semibold">Home</a></li>
+      <li><a href="#about" class="block rounded-full px-5 py-3 hover:bg-white/10">About</a></li>
+      <li><a href="#services" class="block rounded-full px-5 py-3 hover:bg-white/10">Service</a></li>
+      <li><a href="#resume" class="block rounded-full px-5 py-3 hover:bg-white/10">Resume</a></li>
+      <li><a href="#portfolio" class="block rounded-full px-5 py-3 hover:bg-white/10">Project</a></li>
+      <li><a href="#contact" class="block rounded-full px-5 py-3 hover:bg-white/10">Contact</a></li>
+    </ul>
+  </header>
+    <main>
+        <!-- Main content -->
+    </main>
+</body>
+
+</html>
