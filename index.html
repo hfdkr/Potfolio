@@ -8,12 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Fonts: Lufga + Inter + Urbanist -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+
+    <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Urbanist:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
 
     <title>Portfolio - Product</title>
 
@@ -29,6 +30,7 @@
             --color-grey-300: #D0D5DD;
             --color-grey-100: #F2F4F7;
             --color-grey-400: #98A2B3;
+            --color-white-600:#FCFCFD;
 
             /* font */
             --font-lufga: "Lufga", sans-serif;
@@ -52,8 +54,13 @@
              arc to 0 calc(100% - 32px) of 32px cw,                           /* bottom-left corner */
              vline to 32px,
              close
-            );
-}
+            );}
+            .heading-text{
+                @apply font-lufga font-semibold text-[20px] leading-[100%] tracking-[-1.5%] text-orange;
+            }
+            .nav-text{
+                @apply font-lufga text-[16px] leading-[100%] tracking-[-1.5%] text-white-600 hover:text-orange;
+            }
     </style>
 </head>
 
@@ -266,7 +273,7 @@
                             <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
 
                             <div class="notch relative h-64 overflow-hidden bg-grey-100">
-                                <img src="./assets/image-card3.png" alt="Landing Page"
+                                <img src="./assets/image-card1.png" alt="Landing Page"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                             </div>
 
@@ -464,74 +471,136 @@
 
         </section>
 
-
         <!--  TESTIMONIALS  -->
-        <section class="bg-neutral-900 bg-[url(./assets/backgroung.jpg)] bg-center bg-cover rounded-[40px] px-5 py-16">
-            <div class="max-w-6xl mx-auto">
+        <section
+            class="relative overflow-hidden bg-neutral-900 bg-[url(./assets/backgroung.jpg)] bg-center bg-cover rounded-[40px] pt-16 pb-24 lg:pt-27 lg:pb-44 [--section-max:2200px] w-[min(100%,var(--section-max))] ml-[max(0px,calc((100%_-_var(--section-max))/2))]">
 
-                <div class="text-center">
-                    <img src="./assets/Vector-section.png" alt="vector">
-                    <h2 class="font-lufga text-4xl lg:text-5xl font-semibold text-white">Testimonials That<br>Speak to
-                        <span class="text-orange">My Results</span>
-                    </h2>
-                    <img src="./assets/Vector.png" alt="vector">
-                    <p class="text-white/80 max-w-xl mx-auto mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.
-                        Duis lacus nunc, posuere in justo vulputate, bibendum sodales</p>
-                    <img src="./assets/Vector.png" alt="vector">
+            <!-- Header -->
+            <div class="flex flex-col items-center px-5 text-center">
+                <h2 class="relative font-lufga text-4xl lg:text-5xl leading-[1.3] font-medium text-white">
+                    Testimonials <span class="relative">That<img src="./assets/Vector-section.png" alt=""
+                            aria-hidden="true"
+                            class="absolute left-full -top-3 ml-0.5 w-6 lg:w-8 max-w-none pointer-events-none"></span><br>Speak
+                    to
+                    <span class="text-orange">My Results</span>
+                </h2>
+                <p class="relative max-w-[720px] mt-3 text-base lg:text-[17px] leading-[26px] text-white/90">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas
+                    lobortis.
+                    <img src="./assets/Vector.png" alt="" aria-hidden="true"
+                        class="absolute -top-5 -right-[51px] w-6 pointer-events-none">
+                    <img src="./assets/Vector.png" alt="" aria-hidden="true"
+                        class="absolute -left-1 -bottom-4 w-6 pointer-events-none">
+                </p>
+            </div>
+
+            <!-- Cards track: middle card centred, side cards cut by the section edges -->
+            <div class="mt-12 lg:mt-21 flex justify-center gap-6">
+
+                <!-- Review 1 -->
+                <div
+                    class="relative shrink-0 w-[min(784px,85%)] rounded-3xl border border-white/10 bg-white/10 backdrop-blur-md p-5 text-white">
+                    <svg class="absolute top-7.5 right-6 w-[72px] h-[63px] lg:w-[108px] lg:h-[94px] text-white/15"
+                        viewBox="0 0 106 94" fill="currentColor" aria-hidden="true">
+                        <path id="quote-mark"
+                            d="M10 0H36a10 10 0 0 1 10 10V44C46 70 36 88 18 94L14 86C24 78 28 66 28 54H10A10 10 0 0 1 0 44V10A10 10 0 0 1 10 0Z" />
+                        <use href="#quote-mark" x="60" />
+                    </svg>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                            class="w-14 h-14 rounded-full object-cover bg-orange-light">
+                        <div>
+                            <p class="font-semibold text-lg leading-tight">Jayesh Patil</p>
+                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 flex items-center gap-2">
+                        <svg class="h-[26px] w-[150px] text-orange" viewBox="0 0 150 26" fill="currentColor" role="img"
+                            aria-label="5 out of 5 stars">
+                            <polygon id="star" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"
+                                points="13,0.6 16.2,9.2 25.4,9.6 18.1,15.3 20.6,24.1 13,19 5.4,24.1 7.9,15.3 0.6,9.6 9.8,9.2" />
+                            <use href="#star" x="31" />
+                            <use href="#star" x="62" />
+                            <use href="#star" x="93" />
+                            <use href="#star" x="124" />
+                        </svg>
+                        <span class="text-white font-semibold text-xl">5.0</span>
+                    </p>
+                    <p class="mt-4 pr-5 text-base lg:text-[17px] leading-[26px] text-white/80">consectetur adipiscing
+                        elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum
+                        egestas lobortis.Sed lobortis orci elementum egestas lobortis.</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-6 mt-12">
-
-                    <!-- Review 1 -->
-                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                        <div class="flex items-center gap-4">
-                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                                class="w-14 h-14 rounded-full bg-orange-light">
-                            <div>
-                                <p class="font-semibold text-lg">Jayesh Patil</p>
-                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                            </div>
+                <!-- Review 2 -->
+                <div
+                    class="relative shrink-0 w-[min(784px,85%)] rounded-3xl border border-white/10 bg-white/10 backdrop-blur-md p-5 text-white">
+                    <svg class="absolute top-7.5 right-6 w-[72px] h-[63px] lg:w-[108px] lg:h-[94px] text-white/15"
+                        viewBox="0 0 106 94" fill="currentColor" aria-hidden="true">
+                        <use href="#quote-mark" />
+                        <use href="#quote-mark" x="60" />
+                    </svg>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                            class="w-14 h-14 rounded-full object-cover bg-orange-light">
+                        <div>
+                            <p class="font-semibold text-lg leading-tight">Jayesh Patil</p>
+                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
                         </div>
-                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
                     </div>
-
-                    <!-- Review 2 -->
-                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                        <div class="flex items-center gap-4">
-                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                                class="w-14 h-14 rounded-full bg-orange-light">
-                            <div>
-                                <p class="font-semibold text-lg">Jayesh Patil</p>
-                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                            </div>
-                        </div>
-                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div class="border border-white/20 bg-white/5 rounded-3xl p-6 text-white">
-                        <div class="flex items-center gap-4">
-                            <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
-                                class="w-14 h-14 rounded-full bg-orange-light">
-                            <div>
-                                <p class="font-semibold text-lg">Jayesh Patil</p>
-                                <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
-                            </div>
-                        </div>
-                        <p class="text-orange mt-4">★★★★★ <span class="text-white font-semibold">5.0</span></p>
-                        <p class="text-white/80 mt-4">Consectetur adipiscing elit. Duis lacus nunc, posuere in justo
-                            vulputate, bibendum sodales. Lorem ipsum dolor sit amet.</p>
-                    </div>
-
+                    <p class="mt-4 flex items-center gap-2">
+                        <svg class="h-[26px] w-[150px] text-orange" viewBox="0 0 150 26" fill="currentColor" role="img"
+                            aria-label="5 out of 5 stars">
+                            <use href="#star" />
+                            <use href="#star" x="31" />
+                            <use href="#star" x="62" />
+                            <use href="#star" x="93" />
+                            <use href="#star" x="124" />
+                        </svg>
+                        <span class="text-white font-semibold text-xl">5.0</span>
+                    </p>
+                    <p class="mt-4 pr-5 text-base lg:text-[17px] leading-[26px] text-white/80">consectetur adipiscing
+                        elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum
+                        egestas lobortis.Sed lobortis orci elementum egestas lobortis.</p>
                 </div>
+
+                <!-- Review 3 -->
+                <div
+                    class="relative shrink-0 w-[min(784px,85%)] rounded-3xl border border-white/10 bg-white/10 backdrop-blur-md p-5 text-white">
+                    <svg class="absolute top-7.5 right-6 w-[72px] h-[63px] lg:w-[108px] lg:h-[94px] text-white/15"
+                        viewBox="0 0 106 94" fill="currentColor" aria-hidden="true">
+                        <use href="#quote-mark" />
+                        <use href="#quote-mark" x="60" />
+                    </svg>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/Ellipse 21.png" alt="Jayesh Patil"
+                            class="w-14 h-14 rounded-full object-cover bg-orange-light">
+                        <div>
+                            <p class="font-semibold text-lg leading-tight">Jayesh Patil</p>
+                            <p class="font-inter text-sm text-white/70">CEO, Lirante</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 flex items-center gap-2">
+                        <svg class="h-[26px] w-[150px] text-orange" viewBox="0 0 150 26" fill="currentColor" role="img"
+                            aria-label="5 out of 5 stars">
+                            <use href="#star" />
+                            <use href="#star" x="31" />
+                            <use href="#star" x="62" />
+                            <use href="#star" x="93" />
+                            <use href="#star" x="124" />
+                        </svg>
+                        <span class="text-white font-semibold text-xl">5.0</span>
+                    </p>
+                    <p class="mt-4 pr-5 text-base lg:text-[17px] leading-[26px] text-white/80">consectetur adipiscing
+                        elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum
+                        egestas lobortis.Sed lobortis orci elementum egestas lobortis.</p>
+                </div>
+
             </div>
         </section>
-
 
         <!--  CONTACT  -->
         <section id="contact" class="max-w-6xl mx-auto px-5 py-20 text-center
@@ -540,38 +609,93 @@
                     class="text-orange">Let's Discuss</span></h2>
 
             <form action="#"
-                class="flex items-center gap-2 max-w-3xl mx-auto mt-10 border border-orange-light rounded-full p-2">
-                <span
-                    class="w-12 h-12 bg-orange-light/30 text-orange rounded-full flex items-center justify-center">✉</span>
-                <input type="email" placeholder="Enter Email Address" required
-                    class="flex-1 min-w-0 font-inter px-2 py-3 outline-none">
-                <button type="submit" class="bg-orange text-white rounded-full px-10 py-4">Send</button>
+                class="flex items-center gap-3 w-[min(100%,48rem)] ml-[max(0px,calc((100%_-_48rem)/2))] mt-10 border border-orange-light rounded-full p-2 pl-6 transition focus-within:border-orange focus-within:ring-4 focus-within:ring-orange/15">
+                <img src="./assets/sms.png" alt="" aria-hidden="true" class="w-6 h-6 shrink-0">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input id="newsletter-email" type="email" placeholder="Enter Email Address" required
+                    class="flex-1 min-w-0 bg-transparent font-inter text-base placeholder:text-gray-400 px-1 py-3 outline-none">
+                <button type="submit"
+                    class="shrink-0 bg-orange hover:bg-orange/35 hover:-rotate-3 hover:text-orange hover:cursor-pointer text-white font-medium rounded-full px-10 py-4 transition">
+                    Send
+                </button>
             </form>
-
-            <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-6 font-inter text-sm">
-                <p><span class="text-orange">★</span> 4.9/5 Average Ratings</p>
-                <p><span class="text-orange">★</span> 25+ Winning Awards</p>
-                <p><span class="text-orange">✓</span> Certified Product Designer</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-3 mt-6 font-inter text-sm text-white">
+                <p class="flex items-center gap-2 text-[#000000]">
+                    <img src="./assets/star-2.png" alt="star" aria-hidden="true" class="w-5 h-5 shrink-0">
+                    4.9/5 Average Ratings
+                </p>
+                <p class="flex items-center gap-2 text-[#000000]">
+                    <img src="./assets/award.svg" alt="award" aria-hidden="true" class="w-5 h-5 shrink-0">
+                    25+ Winning Awards
+                </p>
+                <p class="flex items-center gap-2 text-[#000000]">
+                    <img src="./assets/shield-tick.svg" alt="shield-tick" aria-hidden="true" class="w-5 h-5 shrink-0">
+                    Certified Product Designer
+                </p>
             </div>
 
         </section>
 
-
         <!--  BANNER  -->
-        <div class="overflow-hidden py-10">
-            <p class="bg-orange text-white text-2xl lg:text-3xl font-medium whitespace-nowrap py-4 -rotate-2 scale-110">
-                UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Research ✦ UX Design ✦ App Design ✦ Dashboard ✦
-                Wireframe ✦ User Research
-            </p>
+        <div class="py-10">
+            <!-- Straight orange band (clips the tilted strip). @container lets the tilt adapt to the band width -->
+            <div class="@container bg-orange rounded-xl overflow-hidden py-6">
+                <!-- Tilted white strip: 2deg, flattened on very wide screens so its ends stay inside the band -->
+                <p
+                    class="-mx-10 -rotate-[min(2deg,atan2(46px,100cqw))] flex items-center justify-center gap-3 lg:gap-4 bg-white text-neutral-900 text-2xl lg:text-3xl font-medium whitespace-nowrap py-2">
+                    <span>UX Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>App Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Dashboard</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Wireframe</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>User Research</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>UX Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>App Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Dashboard</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Wireframe</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>User Research</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>UX Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>App Design</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Dashboard</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>Wireframe</span>
+                    <img src="./assets/star 2.png" alt="" aria-hidden="true"
+                        class="w-5 h-5 lg:w-6 lg:h-6 shrink-0 object-contain">
+                    <span>User Research</span>
+                </p>
+            </div>
         </div>
-
 
         <!--  BLOG  -->
         <section id="blog" class="max-w-6xl mx-auto px-5 py-20">
 
             <div class="flex flex-wrap items-end justify-between gap-6">
                 <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">From my<br>blog post</h2>
-                <a href="#" class="bg-orange text-white rounded-full px-7 py-3">See All</a>
+                <a href="#" class="bg-orange text-white hover:bg-orange/80  rounded-full px-7 py-3">See All</a>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 mt-12">
@@ -579,11 +703,11 @@
                 <!-- Article 1 -->
                 <div class="group">
                     <div class="relative">
-                        <img src="./assets/Rectangle 6.png" alt="Article 1"
+                        <img src="./assets/Vector 6.png" alt="Article 1"
                             class="w-full h-80 object-cover rounded-[32px]">
                         <a href="#"
                             class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
+                            <img src="./assets/up right.png" alt="up-right">
                         </a>
                     </div>
                     <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">UI/UX
@@ -596,11 +720,10 @@
                 <!-- Article 2 -->
                 <div class="group">
                     <div class="relative">
-                        <img src="./assets/Rectangle 6 (1).png" alt="Article 2"
-                            class="w-full h-80 object-cover rounded-[32px]">
+                        <img src="./assets/sugee.svg" alt="Article 2" class="w-full h-80 object-cover rounded-[32px]">
                         <a href="#"
                             class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
+                            <img src="./assets/up right.png" alt="up-right">
                         </a>
                     </div>
                     <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App
@@ -617,7 +740,7 @@
                             class="w-full h-80 object-cover rounded-[32px]">
                         <a href="#"
                             class="absolute bottom-0 right-0 w-20 h-20 bg-heading group-hover:bg-orange rounded-full flex items-center justify-center transition">
-                            <img src="./assets/up right.png" alt="">
+                            <img src="./assets/up right.png" alt="up">
                         </a>
                     </div>
                     <span class="inline-block bg-grey-100 rounded-full px-4 py-1 font-inter text-sm mt-5">App
@@ -633,67 +756,86 @@
 
 
     <!--  FOOTER  -->
-    <footer class="bg-neutral-900 text-white rounded-t-[40px]">
-        <div class="max-w-6xl mx-auto px-5 pt-14 pb-10">
+    <footer
+        class="bg-neutral-900 text-white rounded-t-[40px] [--section-max:2200px] w-[min(100%,var(--section-max))] ml-[max(0px,calc((100%_-_var(--section-max))/2))]">
+        <div class="px-5 lg:px-12 pt-14 lg:pt-16">
 
-            <div class="flex flex-wrap items-center justify-between gap-6 border-b border-white/20 pb-10">
-                <h2 class="font-lufga text-4xl lg:text-5xl font-semibold">Lets Connect there</h2>
+            <!-- Top: title + Hire me -->
+            <div
+                class="flex flex-wrap items-center justify-between gap-6 border-b border-slate-600/70 pb-10 lg:pb-[70px]">
+                <h2 class="font-lufga text-4xl lg:text-[44px] font-semibold">Lets Connect there</h2>
                 <a href="#"
-                    class="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-2xl font-semibold">Hire
+                    class="inline-flex items-center gap-2 rounded-full bg-orange hover:bg-orange/90 px-6 py-2.5 text-[25.69px] font-medium">Hire
                     me
-                    <img src="./assets/up right.png" alt="" aria-hidden="true" class="h-7 w-7 object-contain" /></a>
+                    <img src="./assets/up right.png" alt="" aria-hidden="true" class="h-5 w-5 object-contain" /></a>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-10 pt-10">
+            <!-- Columns: brand takes the free space, Navigation/Contact hug their content, newsletter is fixed -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,460px)_auto_auto_304px] lg:justify-between gap-x-6 gap-y-10 border-b border-slate-600/70 pt-12 pb-9">
 
-                <div>
-                    <a href="#home" class="flex items-center gap-2">
-                        <span
-                            class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-sm font-bold">JC</span>
-                        <span class="font-lufga text-xl font-bold">JCREA</span>
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <a href="#home" class="inline-flex items-center gap-2">
+                        <img src="./assets/logo.png" alt="logo" class="h-8 w-8 object-contain">
+                        <img src="./assets/JCREA.png" alt="JCREA" class="h-4 w-auto object-contain">
                     </a>
-                    <p class="text-white/70 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
-                        nunc, posuere in justo vulputate.</p>
+                    <p class="font-lufga text-[20px] leading-[100%] tracking-[-1.5%] text-white-600">Lorem ipsum dolor
+                        sit amet,
+                        consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
+                    <div class="flex items-center gap-[5px] mt-5">
+                        <a href="#facebook" class="hover:border-b hover:pb-[4px]"><img src="./assets/facebook.png"
+                                alt="facebook" class="object-contain"></a>
+                        <a href="#facebook" class="hover:border-b hover:pb-[4px]"><img src="./assets/youtube.png"
+                                alt="youtub" class="object-contain"></a>
+                        <a href="#facebook" class="hover:border-b hover:pb-[4px]"><img src="./assets/whatsapp.png"
+                                alt="whatssap" class="object-contain"></a>
+                        <a href="#facebook" class="hover:border-b hover:pb-[4px]"><img src="./assets/instagram.png"
+                                alt="instagrame" class="object-contain"></a>
+                        <a href="#facebook" class="hover:border-b hover:pb-[4px]"><img src="./assets/Union.png"
+                                alt="twiter" class="object-contain"></a>
+                    </div>
                 </div>
 
                 <div>
-                    <h3 class="font-lufga text-lg font-semibold text-orange">Navigation</h3>
-                    <ul class="space-y-3 mt-5 text-white/70">
-                        <li><a href="#home" class="hover:text-white">Home</a></li>
-                        <li><a href="#about" class="hover:text-white">About Us</a></li>
-                        <li><a href="#services" class="hover:text-white">Service</a></li>
-                        <li><a href="#resume" class="hover:text-white">Resume</a></li>
-                        <li><a href="#portfolio" class="hover:text-white">Project</a></li>
+                    <h3 class="heading-text">Navigation</h3>
+                    <ul class="space-y-3 mt-5 text-[13px] leading-[18px] text-white/90">
+                        <li><a href="#home" class="nav-text">Home</a></li>
+                        <li><a href="#about" class="nav-text">About Us</a></li>
+                        <li><a href="#services" class="nav-text">Service</a></li>
+                        <li><a href="#resume" class="nav-text">Resume</a></li>
+                        <li><a href="#portfolio" class="nav-text">Project</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="heading-text">Contact</h3>
+                    <ul class="space-y-3 mt-5">
+                        <li class="nav-text cursor-pointer"><a href="#mobile-phone">+91 7738443636</a></li>
+                        <li class="nav-text cursor-pointer"><a href="#email">contact@jcrea.com</a></li>
+                        <li class="nav-text cursor-pointer"><a href="#website">www.jcrea.com</a></li>
                     </ul>
                 </div>
 
-                <div>
-                    <h3 class="font-lufga text-lg font-semibold text-orange">Contact</h3>
-                    <ul class="space-y-3 mt-5 text-white/70">
-                        <li>+91 7738443636</li>
-                        <li>contact@jcrea.com</li>
-                        <li>www.jcrea.com</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-lufga text-lg font-semibold text-orange">Get the latest information</h3>
-                    <form action="#" class="flex bg-white rounded-xl overflow-hidden mt-5">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h3 class="heading-text">Get the latest information</h3>
+                    <form action="#" class="flex w-full max-w-[304px] bg-white rounded-lg overflow-hidden mt-[28px]">
                         <input type="email" placeholder="Email Address" required
-                            class="flex-1 min-w-0 font-inter text-neutral-900 px-4 py-3 outline-none">
-                        <button type="submit" class="bg-orange px-5">➤</button>
+                            class="flex-1 min-w-0 font-inter text-[13px] text-neutral-900 placeholder:text-neutral-900 px-[14px] py-[15px] outline-none">
+                        <button type="submit" aria-label="Subscribe"
+                            class="w-[46px] h-[51px] shrink-0 flex items-center justify-center bg-orange hover:bg-orange/90 text-white text-sm transition">
+                            <img src="./assets/right.png" alt="right">
+                        </button>
                     </form>
                 </div>
 
             </div>
-        </div>
 
-        <div class="border-t border-white/10">
-            <div
-                class="max-w-6xl mx-auto px-5 py-5 flex flex-wrap justify-between gap-3 font-inter text-sm text-white/70">
+            <!-- Bottom bar -->
+            <div class="flex flex-wrap justify-between gap-3 pt-10 pb-8 font-inter text-[15px] text-white/90">
                 <p>Copyright© 2023 Jayesh. All Rights Reserved.</p>
                 <p>User Terms &amp; Conditions | Privacy Policy</p>
             </div>
+
         </div>
     </footer>
 </body>
