@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="flex justify-center">
 
 <head>
     <meta charset="UTF-8" />
@@ -38,21 +38,22 @@
             --font-urbanist: "Urbanist", sans-serif;
         }
         /* Transparent notch around the button (button w-20 = 80px) */
+        /* Transparent notch around the button — scales with the card (--u = 1px, or card width / 373 from lg) */
         .notch {
             clip-path: shape(
-             from 0 32px,
-             arc to 32px 0 of 32px cw,                                        /* top-left corner */
-             hline to calc(100% - 32px),
-             arc to 100% 32px of 32px cw,                                     /* top-right corner */
-             vline to calc(100% - 112px),
-             arc to calc(100% - 20px) calc(100% - 92px) of 20px cw,           /* rounded corner (right edge) */
-             hline to calc(100% - 40px),
-             arc to calc(100% - 92px) calc(100% - 40px) of 52px ccw,          /* concave arc: follows the button's circle */
-             vline to calc(100% - 20px),
-             arc to calc(100% - 112px) 100% of 20px cw,                       /* rounded corner (bottom edge) */
-             hline to 32px,
-             arc to 0 calc(100% - 32px) of 32px cw,                           /* bottom-left corner */
-             vline to 32px,
+             from 0 calc(32 * var(--u, 1px)),
+             arc to calc(32 * var(--u, 1px)) 0 of calc(32 * var(--u, 1px)) cw,                                                           /* top-left corner */
+             hline to calc(100% - 32 * var(--u, 1px)),
+             arc to 100% calc(32 * var(--u, 1px)) of calc(32 * var(--u, 1px)) cw,                                                        /* top-right corner */
+             vline to calc(100% - 112 * var(--u, 1px)),
+             arc to calc(100% - 20 * var(--u, 1px)) calc(100% - 92 * var(--u, 1px)) of calc(20 * var(--u, 1px)) cw,                     /* rounded corner (right edge) */
+             hline to calc(100% - 40 * var(--u, 1px)),
+             arc to calc(100% - 92 * var(--u, 1px)) calc(100% - 40 * var(--u, 1px)) of calc(52 * var(--u, 1px)) ccw,                    /* concave arc: follows the button's circle */
+             vline to calc(100% - 20 * var(--u, 1px)),
+             arc to calc(100% - 112 * var(--u, 1px)) 100% of calc(20 * var(--u, 1px)) cw,                                                /* rounded corner (bottom edge) */
+             hline to calc(32 * var(--u, 1px)),
+             arc to 0 calc(100% - 32 * var(--u, 1px)) of calc(32 * var(--u, 1px)) cw,                                                    /* bottom-left corner */
+             vline to calc(32 * var(--u, 1px)),
              close
             );}
             .heading-text{
@@ -61,10 +62,13 @@
             .nav-text{
                 @apply font-lufga text-[16px] leading-[100%] tracking-[-1.5%] text-white-600 hover:text-orange;
             }
+            .footer-par{
+                @apply font-lufga text-[20px] leading-[100%] tracking-[-1.5%] text-white;
+            }
     </style>
 </head>
 
-<body class="bg-white font-urbanist text-heading">
+<body class="bg-white font-urbanist text-heading [zoom:clamp(1,calc(100vw/1280px),1.67)] w-[min(100%,1280px)]">
 
     <!--  NAVBAR  -->
     <header class="max-w-6xl mx-auto px-5 pt-5">
@@ -172,7 +176,6 @@
 
             </div>
         </section>
-
         <section id="services"
             class="relative overflow-hidden  bg-[url(./assets/backgroung.jpg)] bg-cover bg-center rounded-[40px] px-6 py-14 [--section-max:2200px] w-[min(100%,var(--section-max))] ml-[max(0px,calc((100%_-_var(--section-max))/2))] sm:px-10 lg:px-14 lg:py-16">
 
@@ -201,85 +204,100 @@
                 <div class="grid md:grid-cols-3 gap-6">
 
                     <!-- Card 1 -->
-                    <div class="group relative">
+                    <div class="group relative @container [--u:1px] lg:[--u:calc(100cqw/373)]">
                         <!-- Frosted glass (stops before the bottom of the image) -->
                         <div
-                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                            class="absolute inset-x-0 top-0 bottom-[calc(96*var(--u))] rounded-[calc(32*var(--u))] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                        <h3
+                            class="relative font-lufga px-[calc(24*var(--u))] pt-[calc(32*var(--u))] pb-[calc(20*var(--u))] text-2xl lg:text-[length:calc(28*var(--u))] font-medium text-white">
                             UI/ UX
                             Design</h3>
                         <div class="relative h-px w-full bg-white/30"></div>
 
-                        <div class="relative mt-12">
+                        <div class="relative mt-[calc(48*var(--u))]">
                             <!-- Stacked layers behind the image -->
-                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+                            <div
+                                class="absolute inset-x-[calc(40*var(--u))] top-[calc(-36*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/30">
+                            </div>
+                            <div
+                                class="absolute inset-x-[calc(20*var(--u))] top-[calc(-20*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/50">
+                            </div>
 
                             <!-- Clipped image (clip-path) -->
-                            <div class="notch relative h-64 overflow-hidden bg-grey-100">
+                            <div class="notch relative h-[calc(256*var(--u))] overflow-hidden bg-grey-100">
                                 <img src="./assets/image-card1.png" alt="UI/UX Design"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                             </div>
 
                             <!-- Arrow button -->
                             <a href="#"
-                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                                <img src="./assets/up right.png" alt="">
+                                class="absolute bottom-0 right-0 w-[calc(80*var(--u))] h-[calc(80*var(--u))] bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="" class="lg:w-[45%] h-auto">
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="group relative">
+                    <div class="group relative @container [--u:1px] lg:[--u:calc(100cqw/373)]">
                         <div
-                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                            class="absolute inset-x-0 top-0 bottom-[calc(96*var(--u))] rounded-[calc(32*var(--u))] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                        <h3
+                            class="relative font-lufga px-[calc(24*var(--u))] pt-[calc(32*var(--u))] pb-[calc(20*var(--u))] text-2xl lg:text-[length:calc(28*var(--u))] font-medium text-white">
                             Web
                             Design</h3>
                         <div class="relative h-px w-full bg-white/30"></div>
 
-                        <div class="relative mt-12">
-                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+                        <div class="relative mt-[calc(48*var(--u))]">
+                            <div
+                                class="absolute inset-x-[calc(40*var(--u))] top-[calc(-36*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/30">
+                            </div>
+                            <div
+                                class="absolute inset-x-[calc(20*var(--u))] top-[calc(-20*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/50">
+                            </div>
 
-                            <div class="notch relative h-64 overflow-hidden bg-white">
+                            <div class="notch relative h-[calc(256*var(--u))] overflow-hidden bg-white">
                                 <img src="./assets/image-card2.png" alt="Web Design"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                             </div>
 
                             <a href="#"
-                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                                <img src="./assets/up right.png" alt="">
+                                class="absolute bottom-0 right-0 w-[calc(80*var(--u))] h-[calc(80*var(--u))] bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="" class="lg:w-[45%] h-auto">
                             </a>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="group relative">
+                    <div class="group relative @container [--u:1px] lg:[--u:calc(100cqw/373)]">
                         <div
-                            class="absolute inset-x-0 top-0 bottom-24 rounded-[32px] border border-white/30 bg-white/5 backdrop-blur-md">
+                            class="absolute inset-x-0 top-0 bottom-[calc(96*var(--u))] rounded-[calc(32*var(--u))] border border-white/30 bg-white/5 backdrop-blur-md">
                         </div>
 
-                        <h3 class="relative font-lufga px-6 pt-8 pb-5 text-2xl lg:text-[28px] font-medium text-white">
+                        <h3
+                            class="relative font-lufga px-[calc(24*var(--u))] pt-[calc(32*var(--u))] pb-[calc(20*var(--u))] text-2xl lg:text-[length:calc(28*var(--u))] font-medium text-white">
                             Landing Page</h3>
                         <div class="relative h-px w-full bg-white/30"></div>
 
-                        <div class="relative mt-12">
-                            <div class="absolute inset-x-10 -top-9 h-12 rounded-t-3xl bg-white/30"></div>
-                            <div class="absolute inset-x-5 -top-5 h-12 rounded-t-3xl bg-white/50"></div>
+                        <div class="relative mt-[calc(48*var(--u))]">
+                            <div
+                                class="absolute inset-x-[calc(40*var(--u))] top-[calc(-36*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/30">
+                            </div>
+                            <div
+                                class="absolute inset-x-[calc(20*var(--u))] top-[calc(-20*var(--u))] h-[calc(48*var(--u))] rounded-t-[calc(24*var(--u))] bg-white/50">
+                            </div>
 
-                            <div class="notch relative h-64 overflow-hidden bg-grey-100">
+                            <div class="notch relative h-[calc(256*var(--u))] overflow-hidden bg-grey-100">
                                 <img src="./assets/image-card1.png" alt="Landing Page"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                             </div>
 
                             <a href="#"
-                                class="absolute bottom-0 right-0 w-20 h-20 bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
-                                <img src="./assets/up right.png" alt="">
+                                class="absolute bottom-0 right-0 w-[calc(80*var(--u))] h-[calc(80*var(--u))] bg-heading hover:bg-orange rounded-full flex items-center justify-center transition">
+                                <img src="./assets/up right.png" alt="" class="lg:w-[45%] h-auto">
                             </a>
                         </div>
                     </div>
@@ -757,27 +775,28 @@
 
     <!--  FOOTER  -->
     <footer
-        class="bg-neutral-900 text-white rounded-t-[40px] [--section-max:2200px] w-[min(100%,var(--section-max))] ml-[max(0px,calc((100%_-_var(--section-max))/2))]">
+        class="bg-neutral-900 text-white rounded-t-[24px] [--section-max:2200px] w-[min(100%,var(--section-max))] ml-[max(0px,calc((100%_-_var(--section-max))/2))]">
         <div class="px-5 lg:px-12 pt-14 lg:pt-16">
 
             <!-- Top: title + Hire me -->
-            <div
-                class="flex flex-wrap items-center justify-between gap-6 border-b border-slate-600/70 pb-10 lg:pb-[70px]">
-                <h2 class="font-lufga text-4xl lg:text-[44px] font-semibold">Lets Connect there</h2>
+            <div class="flex flex-wrap items-center justify-between gap-6 border-b-[2px] border-slate-600/70 pb-[55px]">
+                <h2 class="font-lufga font-semibold text-[60px] leading-[100%] track-[-1.5%] text-white-600">Lets
+                    Connect there</h2>
                 <a href="#"
                     class="inline-flex items-center gap-2 rounded-full bg-orange hover:bg-orange/90 px-6 py-2.5 text-[25.69px] font-medium">Hire
                     me
-                    <img src="./assets/up right.png" alt="" aria-hidden="true" class="h-5 w-5 object-contain" /></a>
+                    <img src="./assets/up right.png" alt="up" aria-hidden="true"
+                        class="h-[42px] w-[42px] object-contain" /></a>
             </div>
 
             <!-- Columns: brand takes the free space, Navigation/Contact hug their content, newsletter is fixed -->
             <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,460px)_auto_auto_304px] lg:justify-between gap-x-6 gap-y-10 border-b border-slate-600/70 pt-12 pb-9">
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,460px)_auto_auto_304px] lg:justify-between gap-x-6 gap-y-10 border-b-[2px] border-slate-600/70 pt-12 pb-9">
 
                 <div class="sm:col-span-2 lg:col-span-1">
                     <a href="#home" class="inline-flex items-center gap-2">
-                        <img src="./assets/logo.png" alt="logo" class="h-8 w-8 object-contain">
-                        <img src="./assets/JCREA.png" alt="JCREA" class="h-4 w-auto object-contain">
+                        <img src="./assets/logo.png" alt="logo" class="object-contain">
+                        <img src="./assets/JCREA.png" alt="JCREA" class="object-contain">
                     </a>
                     <p class="font-lufga text-[20px] leading-[100%] tracking-[-1.5%] text-white-600">Lorem ipsum dolor
                         sit amet,
@@ -832,8 +851,8 @@
 
             <!-- Bottom bar -->
             <div class="flex flex-wrap justify-between gap-3 pt-10 pb-8 font-inter text-[15px] text-white/90">
-                <p>Copyright© 2023 Jayesh. All Rights Reserved.</p>
-                <p>User Terms &amp; Conditions | Privacy Policy</p>
+                <p class="footer-par">Copyright© 2023 Jayesh. All Rights Reserved.</p>
+                <p class="footer-par">User Terms &amp; Conditions | Privacy Policy</p>
             </div>
 
         </div>
